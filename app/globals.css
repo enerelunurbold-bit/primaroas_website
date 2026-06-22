@@ -796,9 +796,11 @@ a {
 }
 .story-image {
   position: relative;
-  height: 220px;
+  min-width: 200px;
+  min-height: 200px;
   overflow: hidden;
   background: linear-gradient(135deg, #b9e3ff, #2379d5);
+  flex-shrink: 0;
 }
 .story-card--2 .story-image {
   background:
@@ -1803,7 +1805,14 @@ a {
   .solution-grid,
   .systems-section,
   .story-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+  .story-card {
+    flex-direction: column;
+  }
+  .story-image {
+    min-height: 180px;
+    min-width: auto;
   }
   .solutions-section {
     padding: 80px 20px;
