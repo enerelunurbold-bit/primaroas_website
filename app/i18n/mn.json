@@ -1,0 +1,169 @@
+{
+  "nav": {
+    "services": "Үйлчилгээ",
+    "aiIntegration": "AI Интеграц",
+    "freeResources": "Үнэгүй материал",
+    "about": "Бидний тухай",
+    "contact": "Холбоо барих"
+  },
+  "hero": {
+    "title": "Орчин үеийн бизнесүүдэд зориулсан шинэлэг software шийдлүүд",
+    "subtitle": "Бид бизнесүүдийн үйл ажиллагаа болон хэрэглэгчтэй харилцах туршлагыг сайжруулахад тусалдаг."
+  },
+  "cards": {
+    "webDev": {
+      "title": "Вэб хөгжүүлэлт",
+      "text": "Орчин үеийн технологи ашиглан бүтээсэн responsive вэб application-ууд.",
+      "link": "Дэлгэрэнгүй"
+    },
+    "mobileDev": {
+      "title": "Мобайл хөгжүүлэлт",
+      "text": "Бүх төрлийн төхөөрөмж дээр ажиллах native болон cross-platform мобайл application-ууд.",
+      "link": "Дэлгэрэнгүй"
+    },
+    "uiux": {
+      "title": "UI/UX Дизайн",
+      "text": "Хэрэглэгч төвтэй, ойлгомжтой, ашиглахад хялбар digital туршлага.",
+      "link": "Дэлгэрэнгүй"
+    }
+  },
+  "about": {
+    "label": "PrimaRoas-ийн тухай",
+    "title": "Бизнесийн өсөлт, амжилтыг дэмжих технологийн шийдлүүд.",
+    "body": "PrimaRoas нь бизнесүүдийг digital орчинд амжилттай хөгжихөд туслах шинэлэг software шийдлүүдийг бүтээдэг технологийн компани юм. Манай туршлагатай developers болон designers нь цэвэр код, гоёмсог дизайн, найдвартай ажиллагаагаар таны санааг бодит болгодог."
+  },
+  "services": {
+    "label": "Манай үйлчилгээ",
+    "title": "Таны бизнесийн хэрэгцээнд тохирсон цогц software шийдлүүд."
+  },
+  "solutions": {
+    "ai": {
+      "title": "Custom Local AI Интеграц",
+      "text": "Өөрийн сервер дээр ажиллах, privacy-first AI шийдлээр бизнесээ илүү ухаалаг болгоорой.",
+      "link": "AI интеграцтай танилцах"
+    },
+    "seo": {
+      "title": "SEO Оптимизаци",
+      "text": "Техникийн оптимизаци, контент стратеги, performance tracking ашиглан онлайн харагдацаа нэмэгдүүлээрэй.",
+      "link": "SEO үйлчилгээтэй танилцах"
+    }
+  },
+  "projects": {
+    "label": "Манай төслүүд",
+    "subtitle": "Манай шинэлэг шийдлүүд болон амжилттай хэрэгжүүлэлтүүдтэй танилцаарай",
+    "title": "Klinder",
+    "description": "Хөгжимчдөд loop бүтээж, хуваалцах боломж олгодог орчин үеийн хөгжмийн looping application. Хамгийн сүүлийн үеийн вэб технологиор бүтээгдсэн.",
+    "features": [
+      "Real-time аудио боловсруулалт",
+      "Loop бичлэг болон тоглуулалт",
+      "Cloud синхрончлол",
+      "Нийгмийн сүлжээнд хуваалцах боломж"
+    ],
+    "cta": "Дэлгэрэнгүй"
+  },
+  "calculator": {
+    "label": "AI ROI Тооцоолуур",
+    "title": "AI ашигласнаар хэмнэх зардлаа тооцоолох",
+    "subtitle": "AI ашиглан гар ажиллагаатай ажлуудыг автоматжуулснаар танай бизнес хэр их хэмнэлт хийх боломжтойг хараарай. Оролтын утгуудыг өөрийн багт тохируулан өөрчилж, үр дүнг шууд тооцоолоорой.",
+    "cta": "Үнэгүй AI зөвлөгөө авах",
+    "currentOps": "Одоогийн үйл ажиллагаа",
+    "employees": "Ажилтны тоо",
+    "hourlyRate": "Дундаж цагийн үнэлгээ ($)",
+    "hoursPerTask": "Нэг ажилд зарцуулах цаг",
+    "tasksPerWeek": "7 хоногт хийх ажлын тоо",
+    "automationPct": "Автоматжуулах хувь",
+    "implCost": "Нэвтрүүлэх зардал ($)",
+    "placeholder": "Маягтыг бөглөж Calculate ROI товчийг дарснаар боломжит хэмнэлтээ харах боломжтой",
+    "roiAnalysis": "ROI шинжилгээ",
+    "hoursSaved": "Жилд хэмнэх цаг",
+    "annualSavings": "Жилийн хэмнэлт",
+    "netSavings": "Цэвэр хэмнэлт",
+    "estimatedRoi": "Тооцоолсон ROI",
+    "button": "Өөрийн бизнесийн ROI шинжилгээг авах",
+    "conservative": "30% - Болгоомжтой хувилбар",
+    "moderate": "50% - Дундаж хувилбар",
+    "aggressive": "70% - Өндөр автоматжуулалт",
+    "full": "90% - Бараг бүрэн автоматжуулалт"
+  },
+  "resources": {
+    "label": "Үнэгүй материал ба гарын авлага",
+    "title": "AI интеграц болон бизнесийн автоматжуулалтын талаар илүү ихийг мэдэж аваарай.",
+    "explore": "Материал үзэх"
+  },
+  "stories": {
+    "guide": {
+      "tag": "Үнэгүй гарын авлага",
+      "title": "Local AI Интеграцын гарын авлага",
+      "text": "Бизнесдээ privacy-first AI шийдэл нэвтрүүлэх бүрэн гарын авлага."
+    },
+    "calculator": {
+      "tag": "Үнэгүй tool",
+      "title": "AI ROI Тооцоолуур",
+      "text": "AI автоматжуулалтаас гарах боломжит зардлын хэмнэлт болон үр ашгийг тооцоолоорой."
+    },
+    "checklist": {
+      "tag": "Үнэгүй checklist",
+      "title": "AI-д бэлэн эсэх checklist",
+      "text": "Бизнесээ AI интеграцад бэлтгэх 10 алхамтай checklist."
+    }
+  },
+  "footer": {
+    "tagline": "Бүх хэмжээний бизнесүүдэд зориулсан шинэлэг software шийдлүүд.",
+    "contactTitle": "Холбоо барих",
+    "projectsTitle": "Төслүүд",
+    "servicesTitle": "Үйлчилгээ",
+    "webDev": "Вэб хөгжүүлэлт",
+    "mobileApps": "Мобайл апп",
+    "uiux": "UI/UX Дизайн",
+    "aiIntegration": "AI Интеграц",
+    "copyright": "© 2026 PrimaRoas. Бүх эрх хуулиар хамгаалагдсан."
+  },
+  "servicePages": {
+    "webDev": {
+      "label": "Вэб хөгжүүлэлт",
+      "heroTitle": "Орчин үеийн технологи ашиглан бүтээсэн responsive вэб application-ууд",
+      "sectionTitle": "Цогц вэб хөгжүүлэлтийн шийдлүүд",
+      "description": "Бид таны бизнесийн өсөлтийг дэмжихийн тулд орчин үеийн технологи, шилдэг практик ашиглан scalable вэб application-ууд бүтээдэг.",
+      "features": [
+        "Бүх төхөөрөмжид тохирсон responsive дизайн",
+        "Орчин үеийн framework-үүд: React, Next.js, Node.js",
+        "Хайлтын системд илүү сайн харагдах SEO-д тохирсон бүтэц",
+        "Найдвартай, scalable backend infrastructure"
+      ],
+      "cta": "Вэб application бүтээхэд бэлэн үү?"
+    },
+    "mobileApps": {
+      "label": "Мобайл апп",
+      "heroTitle": "iOS болон Android-д зориулсан native болон cross-platform мобайл application-ууд",
+      "sectionTitle": "Mobile-first хөгжүүлэлт",
+      "description": "Бид native боломжуудыг бүрэн ашиглахын зэрэгцээ олон platform дээр код хуваалцах боломжтой, өндөр performance-тэй application-ууд бүтээдэг.",
+      "features": [
+        "Native iOS болон Android хөгжүүлэлт",
+        "React Native ашигласан cross-platform шийдлүүд",
+        "Offline ажиллагаа болон data sync",
+        "Push notification болон deep linking"
+      ],
+      "cta": "Мобайл апп бүтээхэд бэлэн үү?"
+    },
+    "uiux": {
+      "label": "UI/UX Дизайн",
+      "heroTitle": "Хэрэглэгчдэд таалагдах гоёмсог, ойлгомжтой interface бүтээх",
+      "sectionTitle": "Хэрэглэгч төвтэй дизайн",
+      "description": "Бид user research, wireframe, prototype болон visual design-ийг хослуулан хэрэглэгчдэд ойлгомжтой, таатай туршлага бүтээдэг.",
+      "features": [
+        "User research болон persona боловсруулах",
+        "Wireframe болон interactive prototype гаргах",
+        "Visual design болон brand integration",
+        "Usability testing болон сайжруулалт"
+      ],
+      "cta": "Хэрэглэгчийн туршлагаа сайжруулахад бэлэн үү?"
+    },
+    "pricing": "Үнэ",
+    "getStarted": "Эхлэх",
+    "talkWithTeam": "Манай багтай ярилцах",
+    "basic": "Basic",
+    "standard": "Standard",
+    "premium": "Premium",
+    "custom": "Custom"
+  }
+}

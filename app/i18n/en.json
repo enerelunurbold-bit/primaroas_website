@@ -1,0 +1,169 @@
+{
+  "nav": {
+    "services": "Services",
+    "aiIntegration": "AI Integration",
+    "freeResources": "Free Resources",
+    "about": "About",
+    "contact": "Contact us"
+  },
+  "hero": {
+    "title": "Innovative Software Solutions for Modern Businesses",
+    "subtitle": "We help businesses improve their operations and customer interactions."
+  },
+  "cards": {
+    "webDev": {
+      "title": "Web Development",
+      "text": "Modern, responsive web applications built with cutting-edge technologies.",
+      "link": "Learn more"
+    },
+    "mobileDev": {
+      "title": "Mobile Development",
+      "text": "Native and cross-platform mobile applications that work on all devices.",
+      "link": "Learn more"
+    },
+    "uiux": {
+      "title": "UI/UX Design",
+      "text": "User-centered design for intuitive, easy-to-use digital experiences.",
+      "link": "Learn more"
+    }
+  },
+  "about": {
+    "label": "About PrimaRoas",
+    "title": "Technology solutions that help businesses grow and succeed.",
+    "body": "PrimaRoas is a forward-thinking software development company that creates innovative solutions to help businesses succeed in the digital world. Our experienced developers and designers bring ideas to life with clean code, beautiful design, and great functionality."
+  },
+  "services": {
+    "label": "Our services",
+    "title": "Comprehensive software solutions tailored to your business needs."
+  },
+  "solutions": {
+    "ai": {
+      "title": "Custom Local AI Integration",
+      "text": "Transform your business with privacy-first AI solutions that run on your own servers.",
+      "link": "Explore AI integration"
+    },
+    "seo": {
+      "title": "SEO Optimization",
+      "text": "Boost your online visibility with technical optimization, content strategy, and performance tracking.",
+      "link": "Explore SEO services"
+    }
+  },
+  "projects": {
+    "label": "Our Projects",
+    "subtitle": "Discover our innovative solutions and successful implementations",
+    "title": "Klinder",
+    "description": "A modern music looping application that helps musicians create and share their loops. Built with cutting-edge web technologies for seamless performance.",
+    "features": [
+      "Real-time audio processing",
+      "Loop recording and playback",
+      "Cloud synchronization",
+      "Social sharing features"
+    ],
+    "cta": "Learn More"
+  },
+  "calculator": {
+    "label": "AI ROI Calculator",
+    "title": "Calculate Your AI Savings",
+    "subtitle": "See how much your business could save by automating manual tasks with AI. Adjust the inputs to match your team and get instant estimates.",
+    "cta": "Get free AI consultation",
+    "currentOps": "Current Operations",
+    "employees": "Number of Employees",
+    "hourlyRate": "Average Hourly Rate ($)",
+    "hoursPerTask": "Hours Per Task",
+    "tasksPerWeek": "Tasks Per Week",
+    "automationPct": "Automation Percentage",
+    "implCost": "Implementation Cost ($)",
+    "placeholder": "Fill in the form and click \"Calculate ROI\" to see your potential savings",
+    "roiAnalysis": "ROI Analysis",
+    "hoursSaved": "Hours saved / year",
+    "annualSavings": "Annual savings",
+    "netSavings": "Net savings",
+    "estimatedRoi": "Estimated ROI",
+    "button": "Get Your Custom ROI Analysis",
+    "conservative": "30% - Conservative",
+    "moderate": "50% - Moderate",
+    "aggressive": "70% - Aggressive",
+    "full": "90% - Full Automation"
+  },
+  "resources": {
+    "label": "Free resources & guides",
+    "title": "Learn more about AI integration and business automation.",
+    "explore": "Explore resource"
+  },
+  "stories": {
+    "guide": {
+      "tag": "Free guide",
+      "title": "Local AI Integration Guide",
+      "text": "Complete guide to implementing privacy-first AI solutions in your business."
+    },
+    "calculator": {
+      "tag": "Free tool",
+      "title": "AI ROI Calculator",
+      "text": "Calculate potential cost savings and efficiency gains from AI automation."
+    },
+    "checklist": {
+      "tag": "Free checklist",
+      "title": "AI Readiness Checklist",
+      "text": "A 10-step checklist to prepare your business for AI integration."
+    }
+  },
+  "footer": {
+    "tagline": "Innovative software solutions for businesses of all sizes.",
+    "contactTitle": "Contact",
+    "projectsTitle": "Projects",
+    "servicesTitle": "Services",
+    "webDev": "Web Development",
+    "mobileApps": "Mobile Apps",
+    "uiux": "UI/UX Design",
+    "aiIntegration": "AI Integration",
+    "copyright": "© 2026 PrimaRoas. All rights reserved."
+  },
+  "servicePages": {
+    "webDev": {
+      "label": "Web Development",
+      "heroTitle": "Modern, responsive web applications built with cutting-edge technologies",
+      "sectionTitle": "Comprehensive Web Development Solutions",
+      "description": "We build scalable web applications using modern technologies and industry best practices to help your business grow.",
+      "features": [
+        "Responsive design across all devices",
+        "Modern frameworks: React, Next.js, Node.js",
+        "SEO-optimized structure for better visibility",
+        "Reliable, scalable backend infrastructure"
+      ],
+      "cta": "Ready to build your web application?"
+    },
+    "mobileApps": {
+      "label": "Mobile Apps",
+      "heroTitle": "Native and cross-platform mobile applications for iOS and Android",
+      "sectionTitle": "Mobile-First Development",
+      "description": "We build high-performance applications with a focus on native capabilities while enabling code sharing across platforms.",
+      "features": [
+        "Native iOS and Android development",
+        "Cross-platform solutions with React Native",
+        "Offline functionality and data sync",
+        "Push notifications and deep linking"
+      ],
+      "cta": "Ready to build your mobile app?"
+    },
+    "uiux": {
+      "label": "UI/UX Design",
+      "heroTitle": "Create beautiful, intuitive interfaces that users love",
+      "sectionTitle": "User-Centered Design",
+      "description": "We combine user research, wireframing, prototyping, and visual design to create thoughtful experiences your users will love.",
+      "features": [
+        "User research and persona development",
+        "Wireframing and interactive prototyping",
+        "Visual design and brand integration",
+        "Usability testing and iteration"
+      ],
+      "cta": "Ready to elevate your user experience?"
+    },
+    "pricing": "Pricing",
+    "getStarted": "Get started",
+    "talkWithTeam": "Talk with our team",
+    "basic": "Basic",
+    "standard": "Standard",
+    "premium": "Premium",
+    "custom": "Custom"
+  }
+}
