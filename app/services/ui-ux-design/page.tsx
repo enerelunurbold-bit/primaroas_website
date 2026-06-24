@@ -1,32 +1,29 @@
 "use client";
 
 import { useI18n } from "../../i18n/context";
+import HeroCanvas from "../../hero-canvas";
 
-const pricing = [
-  { tier: "basic", price: "$2,000", features: ["Basic user research", "Wireframes for 5 key screens", "Basic visual design", "1 round of revisions"] },
-  { tier: "standard", price: "$4,000", features: ["Comprehensive user research", "Wireframes for all screens", "Full visual design system", "3 rounds of revisions"] },
-  { tier: "premium", price: "custom", features: ["In-depth user research & testing", "Interactive prototypes", "Custom design system", "Unlimited revisions"] },
-];
-
-const timeline = [
-  { phase: "Research & Analysis", duration: "1–2 weeks" },
-  { phase: "Wireframing", duration: "2–3 weeks" },
-  { phase: "Visual Design", duration: "3–4 weeks" },
-  { phase: "Testing & Refinement", duration: "2–3 weeks" },
-];
+const tiers = ["basic", "standard", "premium"];
 
 export default function UIUXDesign() {
   const { t, tArray } = useI18n();
+  const pricing = tArray("servicePages.uiux.pricing") as unknown as { price: string; features: string[] }[];
+  const timeline = tArray("servicePages.uiux.timeline") as unknown as { phase: string; duration: string }[];
   const features = tArray("servicePages.uiux.features");
 
   return (
     <main>
       <section className="service-hero">
-        <p className="section-label">{t("servicePages.uiux.label")}</p>
-        <h1>{t("servicePages.uiux.heroTitle")}</h1>
+        <HeroCanvas />
+        <div className="service-hero-radial" aria-hidden="true" />
+        <div className="service-hero-grid-bg" aria-hidden="true" />
+        <div className="service-hero-center">
+          <p className="section-label">{t("servicePages.uiux.label")}</p>
+          <h1>{t("servicePages.uiux.heroTitle")}</h1>
+        </div>
       </section>
 
-      <section className="service-section">
+      <section className="service-section service-section--dark">
         <h2>{t("servicePages.uiux.sectionTitle")}</h2>
         <p className="service-description">{t("servicePages.uiux.description")}</p>
         <ul className="service-features">
@@ -37,9 +34,9 @@ export default function UIUXDesign() {
       <section className="service-section service-section--dark">
         <h2>{t("servicePages.pricing")}</h2>
         <div className="pricing-grid">
-          {pricing.map((p) => (
-            <div className={`pricing-card${p.tier === "standard" ? " pricing-card--highlight" : ""}`} key={p.tier}>
-              <h3>{t(`servicePages.${p.tier}`)}</h3>
+          {pricing.map((p, i) => (
+            <div className={`pricing-card${i === 1 ? " pricing-card--highlight" : ""}`} key={i}>
+              <h3>{t(`servicePages.${tiers[i]}`)}</h3>
               <span className="pricing-price">{p.price === "custom" ? t("servicePages.custom") : p.price}</span>
               <ul>
                 {p.features.map((f) => <li key={f}>{f}</li>)}
@@ -50,11 +47,35 @@ export default function UIUXDesign() {
         </div>
       </section>
 
-      <section className="service-section">
-        <h2>Design Timeline</h2>
+      <section className="service-section service-section--dark timeline-section">
+        <h2>{t("servicePages.uiux.timelineTitle")}</h2>
         <div className="timeline">
+          <svg className="timeline-zigzag" viewBox="0 0 800 200" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M-400 180 L93 20 L195 180 L298 20 L400 180 L503 20 L605 180 L708 20 L1200 180" />
+            <path className="timeline-glow" d="M-400 180 L93 20 L195 180 L298 20 L400 180 L503 20 L605 180 L708 20 L1200 180" />
+            <circle className="timeline-endpoint" cx="-400" cy="180" r="8" />
+            <circle className="timeline-endpoint" cx="1200" cy="180" r="8" />
+            <circle className="timeline-particle" r="6">
+              <animateMotion dur="5s" repeatCount="indefinite" path="M-400 180 L93 20 L195 180 L298 20 L400 180 L503 20 L605 180 L708 20 L1200 180" />
+            </circle>
+            <circle className="timeline-particle" r="5">
+              <animateMotion dur="5s" begin="-2.5s" repeatCount="indefinite" path="M1200 180 L708 20 L605 180 L503 20 L400 180 L298 20 L195 180 L93 20 L-400 180" />
+            </circle>
+          </svg>
+          <svg className="timeline-zigzag-z" viewBox="-60 0 450 161" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M-60 22 L77 22 L250 22 L77 139 L250 139 L390 139" />
+            <path className="timeline-glow" d="M-60 22 L77 22 L250 22 L77 139 L250 139 L390 139" />
+            <circle className="timeline-endpoint" cx="-60" cy="22" r="5" />
+            <circle className="timeline-endpoint" cx="390" cy="139" r="5" />
+            <circle className="timeline-particle" r="4">
+              <animateMotion dur="4s" repeatCount="indefinite" path="M-60 22 L77 22 L250 22 L77 139 L250 139 L390 139" />
+            </circle>
+            <circle className="timeline-particle" r="3.5">
+              <animateMotion dur="4s" begin="-2s" repeatCount="indefinite" path="M390 139 L250 139 L77 139 L250 22 L77 22 L-60 22" />
+            </circle>
+          </svg>
           {timeline.map((item, i) => (
-            <div className="timeline-step" key={item.phase}>
+            <div className="timeline-step" key={i}>
               <span className="timeline-number">{i + 1}</span>
               <div>
                 <h3>{item.phase}</h3>
@@ -65,10 +86,6 @@ export default function UIUXDesign() {
         </div>
       </section>
 
-      <section className="service-cta-section">
-        <h2>{t("servicePages.uiux.cta")}</h2>
-        <a href="/#contact" className="round-link">{t("servicePages.talkWithTeam")}</a>
-      </section>
     </main>
   );
 }

@@ -69,7 +69,6 @@ export default function ServicesLayout({
         <div className="footer-base">
           <span>{t("footer.copyright")}</span>
           <div className="footer-social">
-            <a href="https://twitter.com/" target="_blank" rel="noreferrer">Twitter</a>
             <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
             <a href="https://linkedin.com/company/primaroas" target="_blank" rel="noreferrer">LinkedIn</a>
           </div>

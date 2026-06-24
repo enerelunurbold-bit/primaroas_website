@@ -7,7 +7,9 @@
     "contact": "Contact us"
   },
   "hero": {
-    "title": "Innovative Software Solutions for Modern Businesses",
+    "title1": "Innovative",
+    "title2": "software solutions",
+    "title3": "for modern businesses",
     "subtitle": "We help businesses improve their operations and customer interactions."
   },
   "cards": {
@@ -30,11 +32,30 @@
   "about": {
     "label": "About PrimaRoas",
     "title": "Technology solutions that help businesses grow and succeed.",
-    "body": "PrimaRoas is a forward-thinking software development company that creates innovative solutions to help businesses succeed in the digital world. Our experienced developers and designers bring ideas to life with clean code, beautiful design, and great functionality."
+    "heading": "A forward-thinking software development company",
+    "body": "PrimaRoas is a forward-thinking software development company that creates innovative solutions to help businesses succeed in the digital world. Our experienced developers and designers bring ideas to life with clean code, beautiful design, and great functionality.",
+    "missionLabel": "OUR MISSION",
+    "missionText": "To help businesses grow and succeed through technology solutions.",
+    "valuesLabel": "OUR VALUES",
+    "valuesText": "Innovation, quality, and customer satisfaction are at the core of everything we do.",
+    "howWeWork": "HOW WE WORK",
+    "cleanCode": "Clean code",
+    "cleanCodeDesc": "Maintainable, well-architected software built to last.",
+    "beautifulDesign": "Beautiful design",
+    "beautifulDesignDesc": "User-centered interfaces that are intuitive and easy to use.",
+    "greatFunc": "Great functionality",
+    "greatFuncDesc": "Solutions that work reliably and scale with your business.",
+    "privacy": "Privacy by default",
+    "privacyDesc": "On-premise AI keeps your data fully under your control."
   },
   "services": {
     "label": "Our services",
-    "title": "Comprehensive software solutions tailored to your business needs."
+    "title": "Comprehensive software solutions",
+    "subtitle": "Tailored to your business needs — from web and mobile to AI integration and SEO.",
+    "featured": "FEATURED",
+    "ctaTitle": "Have something else in mind?",
+    "ctaText": "Tell us about your project and we'll bring it to life.",
+    "ctaLink": "Start a conversation →"
   },
   "solutions": {
     "ai": {
@@ -50,6 +71,7 @@
   },
   "projects": {
     "label": "Our Projects",
+    "heading": "Innovative solutions, shipped",
     "subtitle": "Discover our innovative solutions and successful implementations",
     "title": "Klinder",
     "description": "A modern music looping application that helps musicians create and share their loops. Built with cutting-edge web technologies for seamless performance.",
@@ -88,7 +110,9 @@
   "resources": {
     "label": "Free resources & guides",
     "title": "Learn more about AI integration and business automation.",
-    "explore": "Explore resource"
+    "explore": "Explore resource",
+    "downloadGuide": "Download Free Guide (PDF)",
+    "downloadChecklist": "Download Free Checklist (PDF)"
   },
   "stories": {
     "guide": {
@@ -130,7 +154,19 @@
         "SEO-optimized structure for better visibility",
         "Reliable, scalable backend infrastructure"
       ],
-      "cta": "Ready to build your web application?"
+      "cta": "Ready to build your web application?",
+      "timelineTitle": "Project Timeline",
+      "pricing": [
+        { "price": "$5,000", "features": ["5-page website", "Basic SEO setup", "Contact form integration", "1 month support"] },
+        { "price": "$12,000", "features": ["10–15 pages", "Advanced SEO", "Custom integrations", "3 months support"] },
+        { "price": "custom", "features": ["Unlimited pages", "Full SEO & marketing setup", "Custom CMS", "6 months support"] }
+      ],
+      "timeline": [
+        { "phase": "Planning & Design", "duration": "2–3 weeks" },
+        { "phase": "Development", "duration": "4–8 weeks" },
+        { "phase": "Testing & QA", "duration": "1–2 weeks" },
+        { "phase": "Launch & Support", "duration": "Ongoing" }
+      ]
     },
     "mobileApps": {
       "label": "Mobile Apps",
@@ -143,7 +179,19 @@
         "Offline functionality and data sync",
         "Push notifications and deep linking"
       ],
-      "cta": "Ready to build your mobile app?"
+      "cta": "Ready to build your mobile app?",
+      "timelineTitle": "Development Process",
+      "pricing": [
+        { "price": "$5,000", "features": ["Both platforms", "Basic UI/UX implementation", "Core functionality", "3 months support"] },
+        { "price": "$10,000", "features": ["Both platforms", "Custom UI/UX design", "Advanced features & integrations", "6 months support"] },
+        { "price": "custom", "features": ["React Native cross-platform", "Premium UI/UX design", "Enterprise features & security", "12 months support"] }
+      ],
+      "timeline": [
+        { "phase": "Planning & Design", "duration": "2–3 weeks" },
+        { "phase": "Core Development", "duration": "4–6 weeks" },
+        { "phase": "Advanced Features", "duration": "4–6 weeks" },
+        { "phase": "Testing & Launch", "duration": "2–3 weeks" }
+      ]
     },
     "uiux": {
       "label": "UI/UX Design",
@@ -156,7 +204,119 @@
         "Visual design and brand integration",
         "Usability testing and iteration"
       ],
-      "cta": "Ready to elevate your user experience?"
+      "cta": "Ready to elevate your user experience?",
+      "timelineTitle": "Design Timeline",
+      "pricing": [
+        { "price": "$2,000", "features": ["Basic user research", "Wireframes for 5 key screens", "Basic visual design", "1 round of revisions"] },
+        { "price": "$4,000", "features": ["Comprehensive user research", "Wireframes for all screens", "Full visual design system", "3 rounds of revisions"] },
+        { "price": "custom", "features": ["In-depth user research & testing", "Interactive prototypes", "Custom design system", "Unlimited revisions"] }
+      ],
+      "timeline": [
+        { "phase": "Research & Analysis", "duration": "1–2 weeks" },
+        { "phase": "Wireframing", "duration": "2–3 weeks" },
+        { "phase": "Visual Design", "duration": "3–4 weeks" },
+        { "phase": "Testing & Refinement", "duration": "2–3 weeks" }
+      ]
+    },
+    "seo": {
+      "label": "SEO Optimization",
+      "heroTitle": "Boost your online visibility and drive organic traffic with our comprehensive SEO services",
+      "solutionsTitle": "Comprehensive SEO Solutions",
+      "solutionsText": "Our SEO services combine technical expertise with strategic content optimization to help your business rank higher in search results and attract more qualified traffic.",
+      "features": [
+        "Technical SEO optimization for better search engine crawling",
+        "Local SEO strategies for regional visibility",
+        "Content optimization and keyword research",
+        "Performance tracking and analytics"
+      ],
+      "pricingTitle": "Flexible Pricing Plans",
+      "pricingSubtitle": "Choose the plan that best fits your business needs",
+      "pricing": [
+        {
+          "tier": "Basic",
+          "price": "$500/month",
+          "features": [
+            "Basic technical SEO audit",
+            "Keyword research and optimization",
+            "Monthly performance reports",
+            "Basic content optimization"
+          ]
+        },
+        {
+          "tier": "Standard",
+          "price": "$1,000/month",
+          "features": [
+            "Comprehensive technical SEO",
+            "Advanced keyword research",
+            "Weekly performance reports",
+            "Content strategy and optimization"
+          ]
+        },
+        {
+          "tier": "Premium",
+          "price": "$2,000/month",
+          "features": [
+            "Full technical SEO optimization",
+            "Competitive analysis and strategy",
+            "Daily performance monitoring",
+            "Custom content strategy"
+          ]
+        }
+      ],
+      "timelineTitle": "Implementation Timeline",
+      "timelineSubtitle": "Our structured approach to improving your search visibility",
+      "timeline": [
+        {
+          "title": "Initial Audit",
+          "text": "Comprehensive analysis of your current SEO performance",
+          "duration": "1-2 weeks"
+        },
+        {
+          "title": "Strategy Development",
+          "text": "Creating a customized SEO strategy based on audit results",
+          "duration": "2-3 weeks"
+        },
+        {
+          "title": "Implementation",
+          "text": "Executing technical and content optimizations",
+          "duration": "4-6 weeks"
+        },
+        {
+          "title": "Monitoring & Optimization",
+          "text": "Continuous tracking and improvement of SEO performance",
+          "duration": "Ongoing"
+        }
+      ],
+      "cta": "Get Free SEO Consultation"
+    },
+    "aiIntegration": {
+      "label": "Custom Local AI Integration",
+      "heroTitle": "Transform your business with privacy-first AI solutions that run on your own servers",
+      "whyTitle": "Why Choose Local AI?",
+      "benefits": [
+        {
+          "title": "Complete Data Privacy",
+          "text": "Your data never leaves your servers. Full control and compliance with GDPR, HIPAA, and local regulations.",
+          "icon": "shield"
+        },
+        {
+          "title": "Lightning Fast Performance",
+          "text": "No internet dependency. Process thousands of requests per second with local AI models.",
+          "icon": "bolt"
+        },
+        {
+          "title": "Cost Effective",
+          "text": "No monthly API fees. One-time setup with unlimited usage on your infrastructure.",
+          "icon": "lock"
+        }
+      ],
+      "solutionsTitle": "AI Solutions We Implement",
+      "solutions": [
+        "Custom Chatbots & Virtual Assistants",
+        "Document Processing & Analysis",
+        "Recommendation Systems",
+        "Fraud Detection & Security"
+      ]
     },
     "pricing": "Pricing",
     "getStarted": "Get started",

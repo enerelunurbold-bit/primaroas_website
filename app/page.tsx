@@ -1,9 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import AIROICalculator from "./ai-roi-calculator";
 import LanguageToggle from "./language-toggle";
 import KlinderCarousel from "./klinder-carousel";
+import HeroCanvas from "./hero-canvas";
+import HeroGlobe from "./hero-globe";
 import { useI18n } from "./i18n/context";
+
 
 const cardKeys = [
   { key: "webDev", href: "/services/web-development" },
@@ -12,8 +16,8 @@ const cardKeys = [
 ];
 
 const solutionKeys = [
-  { key: "ai", href: "#ai-integration" },
-  { key: "seo", href: "#contact" },
+  { key: "ai", href: "/services/ai-integration" },
+  { key: "seo", href: "/services/seo-optimization" },
 ];
 
 const storyKeys = ["guide", "checklist"];
@@ -29,12 +33,13 @@ function Brand() {
 
 export default function Home() {
   const { t } = useI18n();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <main id="top" className="itz-layout">
       <header className="dock">
         <Brand />
-        <div className="dock-line" />
+        <div className="dock-line dock-line--desktop" />
         <nav aria-label="Main navigation">
           <a href="#services">{t("nav.services")}</a>
           <a href="#ai-integration">{t("nav.aiIntegration")}</a>
@@ -45,128 +50,98 @@ export default function Home() {
           {t("nav.contact")}
         </a>
         <LanguageToggle />
-        <span className="menu-dots" aria-label="Menu">
-          •••
-        </span>
+        <div className="dock-line dock-line--mobile" />
+        <button
+          className={`menu-burger ${menuOpen ? "menu-burger--open" : ""}`}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
       </header>
+      {menuOpen && (
+        <div className="mobile-menu">
+          <nav>
+            <a href="#services" onClick={() => setMenuOpen(false)}>{t("nav.services")}</a>
+            <a href="#ai-integration" onClick={() => setMenuOpen(false)}>{t("nav.aiIntegration")}</a>
+            <a href="#resources" onClick={() => setMenuOpen(false)}>{t("nav.freeResources")}</a>
+            <a href="#about" onClick={() => setMenuOpen(false)}>{t("nav.about")}</a>
+          </nav>
+          <a className="mobile-menu-cta" href="#contact" onClick={() => setMenuOpen(false)}>
+            {t("nav.contact")}
+          </a>
+        </div>
+      )}
 
       <section className="zone-hero" aria-labelledby="hero-title">
-        <div className="hero-glow" aria-hidden="true" />
-        <div className="software-network" aria-hidden="true">
-          <svg
-            className="network-canvas"
-            viewBox="0 0 1440 800"
-            preserveAspectRatio="none"
-          >
-            <g className="network-canvas__links">
-              <path d="M-30 162 L170 202 L324 136 L618 184 L972 119 L1170 174 L1470 145" />
-              <path d="M12 351 L170 202 L358 306 L694 392 L1017 315 L1321 282 L1445 346" />
-              <path d="M-16 586 L234 544 L404 554 L732 632 L1071 524 L1377 522 L1458 565" />
-              <path d="M166 -20 L170 202 L358 306 L404 554 L499 826" />
-              <path d="M618 184 L694 392 L732 632 L816 836" />
-              <path d="M972 119 L1017 315 L1071 524 L1133 829" />
-              <path d="M324 136 L358 306 L694 392 L1017 315" />
-              <path d="M234 544 L404 554 L694 392 L972 119" />
-              <path d="M404 554 L732 632 L1017 315 L1321 282" />
-              <path d="M170 202 L404 554 L694 392 L1071 524" />
-              <path d="M358 306 L618 184 L972 119 L1321 282" />
-              <path d="M732 632 L1071 524 L1377 522" />
-            </g>
-            <g className="network-canvas__particles">
-              <circle r="2.5">
-                <animateMotion dur="6s" repeatCount="indefinite" path="M-30 162 L170 202 L324 136 L618 184 L972 119 L1170 174 L1470 145" />
-              </circle>
-              <circle r="2.5">
-                <animateMotion dur="7s" begin="-2s" repeatCount="indefinite" path="M1445 346 L1321 282 L1017 315 L694 392 L358 306 L170 202 L12 351" />
-              </circle>
-              <circle r="3">
-                <animateMotion dur="8s" begin="-4s" repeatCount="indefinite" path="M-16 586 L234 544 L404 554 L732 632 L1071 524 L1377 522 L1458 565" />
-              </circle>
-              <circle r="2.5">
-                <animateMotion dur="5.5s" begin="-1s" repeatCount="indefinite" path="M499 826 L404 554 L358 306 L170 202 L166 -20" />
-              </circle>
-              <circle r="2.5">
-                <animateMotion dur="6.5s" begin="-3s" repeatCount="indefinite" path="M972 119 L1017 315 L1071 524 L1133 829" />
-              </circle>
-              <circle r="2">
-                <animateMotion dur="5s" begin="-2.5s" repeatCount="indefinite" path="M1470 145 L1170 174 L972 119 L618 184 L324 136 L170 202 L-30 162" />
-              </circle>
-              <circle r="2">
-                <animateMotion dur="6s" begin="-4.2s" repeatCount="indefinite" path="M12 351 L170 202 L358 306 L694 392 L1017 315 L1321 282 L1445 346" />
-              </circle>
-              <circle r="2">
-                <animateMotion dur="7s" begin="-1.8s" repeatCount="indefinite" path="M1458 565 L1377 522 L1071 524 L732 632 L404 554 L234 544 L-16 586" />
-              </circle>
-              <circle r="2">
-                <animateMotion dur="5.8s" begin="-3.6s" repeatCount="indefinite" path="M499 826 L404 554 L358 306 L170 202 L166 -20" />
-              </circle>
-              <circle r="2">
-                <animateMotion dur="6.8s" begin="-5.1s" repeatCount="indefinite" path="M972 119 L1017 315 L1071 524 L1133 829" />
-              </circle>
-              <circle r="2.2">
-                <animateMotion dur="7.4s" begin="-2.9s" repeatCount="indefinite" path="M972 119 L694 392 L404 554 L234 544" />
-              </circle>
-              <circle r="2.2">
-                <animateMotion dur="6.2s" begin="-4.7s" repeatCount="indefinite" path="M404 554 L732 632 L1017 315 L1321 282" />
-              </circle>
-              <circle r="2">
-                <animateMotion dur="5.4s" begin="-1.4s" repeatCount="indefinite" path="M170 202 L404 554 L694 392 L1071 524" />
-              </circle>
-            </g>
-          </svg>
-        </div>
-        <div className="hero-copy">
-          <h1 id="hero-title">{t("hero.title")}</h1>
-          <p>{t("hero.subtitle")}</p>
-        </div>
-        <div className="hero-cards">
-          {cardKeys.map(({ key, href }) => (
-            <a className="hero-card" href={href} key={key}>
-              <div>
-                <h2>{t(`cards.${key}.title`)}</h2>
-                <p>{t(`cards.${key}.text`)}</p>
-              </div>
-              <span className="card-link">{t(`cards.${key}.link`)}</span>
-            </a>
-          ))}
+        <HeroCanvas />
+        <div className="hero-radial" aria-hidden="true" />
+        <div className="hero-grid-bg" aria-hidden="true" />
+        <div className="hero-layout">
+          <div className="hero-copy">
+            <h1 id="hero-title">
+              {t("hero.title1")} <span className="hero-gradient-text">{t("hero.title2")}</span> {t("hero.title3")}
+            </h1>
+            <p>{t("hero.subtitle")}</p>
+          </div>
+          <div className="hero-globe-wrap"><HeroGlobe /></div>
         </div>
       </section>
 
-      <section className="intro-section" id="about">
-        <p className="section-label">{t("about.label")}</p>
-        <h2>{t("about.title")}</h2>
-        <p className="intro-body">{t("about.body")}</p>
-      </section>
-
-      <section className="solutions-section" id="services">
-        <div className="section-heading">
+      <section className="services-grid-section" id="services">
+        <div className="services-header">
           <p className="section-label">{t("services.label")}</p>
           <h2>{t("services.title")}</h2>
+          <p className="services-sub">{t("services.subtitle")}</p>
         </div>
-        <div className="solution-grid">
-          {solutionKeys.map(({ key, href }, index) => (
-            <article
-              className={`solution-card solution-card--${index + 1}`}
-              key={key}
-            >
-              <div className="solution-art" aria-hidden="true">
-                <span />
-                <i />
-                <b />
-              </div>
-              <div className="solution-copy">
-                <h3>{t(`solutions.${key}.title`)}</h3>
-                <p>{t(`solutions.${key}.text`)}</p>
-                <a href={href}>{t(`solutions.${key}.link`)}</a>
-              </div>
-            </article>
-          ))}
+        <div className="services-cards">
+          <a href="/services/web-development" className="svc-card">
+            <span className="svc-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M9 8l-5 5 5 5M17 8l5 5-5 5" /></svg></span>
+            <h3>{t("cards.webDev.title")}</h3>
+            <p>{t("cards.webDev.text")}</p>
+            <span className="svc-learn">{t("cards.webDev.link")} →</span>
+          </a>
+          <a href="/services/mobile-apps" className="svc-card">
+            <span className="svc-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="7" y="3" width="12" height="20" rx="2.5" /><path d="M11 19h4" /></svg></span>
+            <h3>{t("cards.mobileDev.title")}</h3>
+            <p>{t("cards.mobileDev.text")}</p>
+            <span className="svc-learn">{t("cards.mobileDev.link")} →</span>
+          </a>
+          <a href="/services/ui-ux-design" className="svc-card">
+            <span className="svc-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M13 3l9 5-9 5-9-5z" /><path d="M4 13l9 5 9-5" /></svg></span>
+            <h3>{t("cards.uiux.title")}</h3>
+            <p>{t("cards.uiux.text")}</p>
+            <span className="svc-learn">{t("cards.uiux.link")} →</span>
+          </a>
+          <a href="/services/ai-integration" className="svc-card svc-card--featured">
+            <span className="svc-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="8" y="8" width="10" height="10" rx="2" /><path d="M11 3v3M15 3v3M11 20v3M15 20v3M3 11h3M3 15h3M20 11h3M20 15h3" /></svg></span>
+            <span className="svc-badge">{t("services.featured")}</span>
+            <h3>{t("solutions.ai.title")}</h3>
+            <p>{t("solutions.ai.text")}</p>
+            <span className="svc-learn">{t("solutions.ai.link")} →</span>
+          </a>
+          <a href="/services/seo-optimization" className="svc-card">
+            <span className="svc-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="6" /><path d="M16 16l5 5" /></svg></span>
+            <h3>{t("solutions.seo.title")}</h3>
+            <p>{t("solutions.seo.text")}</p>
+            <span className="svc-learn">{t("solutions.seo.link")} →</span>
+          </a>
+          <div className="svc-card svc-card--cta">
+            <h3>{t("services.ctaTitle")}</h3>
+            <p>{t("services.ctaText")}</p>
+            <a href="#contact" className="svc-cta-link">{t("services.ctaLink")}</a>
+          </div>
         </div>
       </section>
 
       <section className="projects-section" id="projects">
+
         <div className="projects-header">
           <p className="section-label">{t("projects.label")}</p>
+          <h2>{t("projects.heading")}</h2>
         </div>
         <div className="projects-grid">
           <div className="project-preview">
@@ -193,9 +168,11 @@ export default function Home() {
           <h2>{t("resources.title")}</h2>
         </div>
         <div className="story-grid">
-          {storyKeys.map((key, index) => (
-            <a
-              href="#contact"
+          {[
+            { key: "guide", pdf: "/ai-integration-guide.pdf", downloadKey: "downloadGuide" },
+            { key: "checklist", pdf: "/ai-readiness-checklist.pdf", downloadKey: "downloadChecklist" },
+          ].map(({ key, pdf, downloadKey }, index) => (
+            <div
               className={`story-card story-card--${index + 1}`}
               key={key}
             >
@@ -208,21 +185,78 @@ export default function Home() {
                 </div>
                 <h3>{t(`stories.${key}.title`)}</h3>
                 <p>{t(`stories.${key}.text`)}</p>
-                <em>{t("resources.explore")}</em>
+                <a className="story-download" href={pdf} download>
+                  {t(`resources.${downloadKey}`)}
+                </a>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </section>
 
       <section className="systems-section" id="ai-integration">
+
         <div className="systems-copy">
           <p className="section-label">{t("calculator.label")}</p>
           <h2>{t("calculator.title")}</h2>
           <p>{t("calculator.subtitle")}</p>
-          <a href="#contact">{t("calculator.cta")}</a>
         </div>
         <AIROICalculator />
+      </section>
+
+      <section className="about-section" id="about">
+        <div className="about-grid">
+          <div className="about-left">
+            <p className="section-label">{t("about.label")}</p>
+            <h2>{t("about.heading")}</h2>
+            <p className="about-body">{t("about.body")}</p>
+            <div className="about-cards">
+              <div className="about-card">
+                <span className="about-card-label">{t("about.missionLabel")}</span>
+                <p>{t("about.missionText")}</p>
+              </div>
+              <div className="about-card">
+                <span className="about-card-label">{t("about.valuesLabel")}</span>
+                <p>{t("about.valuesText")}</p>
+              </div>
+            </div>
+          </div>
+          <div className="about-right">
+            <div className="about-how">
+              <span className="about-how-title">{t("about.howWeWork")}</span>
+              <div className="about-how-list">
+                <div className="about-how-item">
+                  <span className="about-dot" />
+                  <div>
+                    <strong>{t("about.cleanCode")}</strong>
+                    <p>{t("about.cleanCodeDesc")}</p>
+                  </div>
+                </div>
+                <div className="about-how-item">
+                  <span className="about-dot" />
+                  <div>
+                    <strong>{t("about.beautifulDesign")}</strong>
+                    <p>{t("about.beautifulDesignDesc")}</p>
+                  </div>
+                </div>
+                <div className="about-how-item">
+                  <span className="about-dot" />
+                  <div>
+                    <strong>{t("about.greatFunc")}</strong>
+                    <p>{t("about.greatFuncDesc")}</p>
+                  </div>
+                </div>
+                <div className="about-how-item">
+                  <span className="about-dot" />
+                  <div>
+                    <strong>{t("about.privacy")}</strong>
+                    <p>{t("about.privacyDesc")}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <footer className="zone-footer" id="contact">
@@ -256,7 +290,6 @@ export default function Home() {
         <div className="footer-base">
           <span>{t("footer.copyright")}</span>
           <div className="footer-social">
-            <a href="https://twitter.com/" target="_blank" rel="noreferrer">Twitter</a>
             <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
             <a href="https://linkedin.com/company/primaroas" target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
