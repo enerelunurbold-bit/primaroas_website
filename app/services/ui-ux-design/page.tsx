@@ -62,16 +62,14 @@ export default function UIUXDesign() {
               <animateMotion dur="5s" begin="-2.5s" repeatCount="indefinite" path="M1200 180 L708 20 L605 180 L503 20 L400 180 L298 20 L195 180 L93 20 L-400 180" />
             </circle>
           </svg>
-          <svg className="timeline-zigzag-z" viewBox="-60 0 450 161" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M-60 22 L77 22 L250 22 L77 139 L250 139 L390 139" />
-            <path className="timeline-glow" d="M-60 22 L77 22 L250 22 L77 139 L250 139 L390 139" />
-            <circle className="timeline-endpoint" cx="-60" cy="22" r="5" />
-            <circle className="timeline-endpoint" cx="390" cy="139" r="5" />
-            <circle className="timeline-particle" r="4">
-              <animateMotion dur="4s" repeatCount="indefinite" path="M-60 22 L77 22 L250 22 L77 139 L250 139 L390 139" />
+          <svg className="timeline-zigzag-z" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M-5 8.5 L25 8.5 L75 8.5 L25 62.3 L75 62.3 L105 62.3" />
+            <path className="timeline-glow" d="M-5 8.5 L25 8.5 L75 8.5 L25 62.3 L75 62.3 L105 62.3" />
+            <circle className="timeline-particle" r="1.3">
+              <animateMotion dur="4s" repeatCount="indefinite" path="M-5 8.5 L25 8.5 L75 8.5 L25 62.3 L75 62.3 L105 62.3" />
             </circle>
-            <circle className="timeline-particle" r="3.5">
-              <animateMotion dur="4s" begin="-2s" repeatCount="indefinite" path="M390 139 L250 139 L77 139 L250 22 L77 22 L-60 22" />
+            <circle className="timeline-particle" r="1.1">
+              <animateMotion dur="4s" begin="-2s" repeatCount="indefinite" path="M105 62.3 L75 62.3 L25 62.3 L75 8.5 L25 8.5 L-5 8.5" />
             </circle>
           </svg>
           {timeline.map((item, i) => (

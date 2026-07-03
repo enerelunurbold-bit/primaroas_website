@@ -1,13 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import AIROICalculator from "./ai-roi-calculator";
-import LanguageToggle from "./language-toggle";
 import KlinderCarousel from "./klinder-carousel";
 import HeroCanvas from "./hero-canvas";
 import HeroGlobe from "./hero-globe";
 import { useI18n } from "./i18n/context";
-
+import { Header, Footer } from "./site-chrome";
 
 const cardKeys = [
   { key: "webDev", href: "/services/web-development" },
@@ -20,61 +17,12 @@ const solutionKeys = [
   { key: "seo", href: "/services/seo-optimization" },
 ];
 
-const storyKeys = ["guide", "checklist"];
-
-function Brand() {
-  return (
-    <a className="brand" href="#top">
-      <span className="brand-mark">P</span>
-      <span>primaroas</span>
-    </a>
-  );
-}
-
 export default function Home() {
   const { t } = useI18n();
-  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <main id="top" className="itz-layout">
-      <header className="dock">
-        <Brand />
-        <div className="dock-line dock-line--desktop" />
-        <nav aria-label="Main navigation">
-          <a href="#services">{t("nav.services")}</a>
-          <a href="#ai-integration">{t("nav.aiIntegration")}</a>
-          <a href="#resources">{t("nav.freeResources")}</a>
-          <a href="#about">{t("nav.about")}</a>
-        </nav>
-        <a className="dock-cta" href="#contact">
-          {t("nav.contact")}
-        </a>
-        <LanguageToggle />
-        <div className="dock-line dock-line--mobile" />
-        <button
-          className={`menu-burger ${menuOpen ? "menu-burger--open" : ""}`}
-          aria-label={menuOpen ? "Close menu" : "Open menu"}
-          aria-expanded={menuOpen}
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
-      </header>
-      {menuOpen && (
-        <div className="mobile-menu">
-          <nav>
-            <a href="#services" onClick={() => setMenuOpen(false)}>{t("nav.services")}</a>
-            <a href="#ai-integration" onClick={() => setMenuOpen(false)}>{t("nav.aiIntegration")}</a>
-            <a href="#resources" onClick={() => setMenuOpen(false)}>{t("nav.freeResources")}</a>
-            <a href="#about" onClick={() => setMenuOpen(false)}>{t("nav.about")}</a>
-          </nav>
-          <a className="mobile-menu-cta" href="#contact" onClick={() => setMenuOpen(false)}>
-            {t("nav.contact")}
-          </a>
-        </div>
-      )}
+      <Header />
 
       <section className="zone-hero" aria-labelledby="hero-title">
         <HeroCanvas />
@@ -162,139 +110,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="insights-section" id="resources">
-        <div className="section-heading">
-          <p className="section-label">{t("resources.label")}</p>
-          <h2>{t("resources.title")}</h2>
-        </div>
-        <div className="story-grid">
-          {[
-            { key: "guide", pdf: "/ai-integration-guide.pdf", downloadKey: "downloadGuide" },
-            { key: "checklist", pdf: "/ai-readiness-checklist.pdf", downloadKey: "downloadChecklist" },
-          ].map(({ key, pdf, downloadKey }, index) => (
-            <div
-              className={`story-card story-card--${index + 1}`}
-              key={key}
-            >
-              <div className="story-image" aria-hidden="true">
-                <span />
-              </div>
-              <div className="story-body">
-                <div>
-                  <span>{t(`stories.${key}.tag`)}</span>
-                </div>
-                <h3>{t(`stories.${key}.title`)}</h3>
-                <p>{t(`stories.${key}.text`)}</p>
-                <a className="story-download" href={pdf} download>
-                  {t(`resources.${downloadKey}`)}
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="systems-section" id="ai-integration">
-
-        <div className="systems-copy">
-          <p className="section-label">{t("calculator.label")}</p>
-          <h2>{t("calculator.title")}</h2>
-          <p>{t("calculator.subtitle")}</p>
-        </div>
-        <AIROICalculator />
-      </section>
-
-      <section className="about-section" id="about">
-        <div className="about-grid">
-          <div className="about-left">
-            <p className="section-label">{t("about.label")}</p>
-            <h2>{t("about.heading")}</h2>
-            <p className="about-body">{t("about.body")}</p>
-            <div className="about-cards">
-              <div className="about-card">
-                <span className="about-card-label">{t("about.missionLabel")}</span>
-                <p>{t("about.missionText")}</p>
-              </div>
-              <div className="about-card">
-                <span className="about-card-label">{t("about.valuesLabel")}</span>
-                <p>{t("about.valuesText")}</p>
-              </div>
-            </div>
-          </div>
-          <div className="about-right">
-            <div className="about-how">
-              <span className="about-how-title">{t("about.howWeWork")}</span>
-              <div className="about-how-list">
-                <div className="about-how-item">
-                  <span className="about-dot" />
-                  <div>
-                    <strong>{t("about.cleanCode")}</strong>
-                    <p>{t("about.cleanCodeDesc")}</p>
-                  </div>
-                </div>
-                <div className="about-how-item">
-                  <span className="about-dot" />
-                  <div>
-                    <strong>{t("about.beautifulDesign")}</strong>
-                    <p>{t("about.beautifulDesignDesc")}</p>
-                  </div>
-                </div>
-                <div className="about-how-item">
-                  <span className="about-dot" />
-                  <div>
-                    <strong>{t("about.greatFunc")}</strong>
-                    <p>{t("about.greatFuncDesc")}</p>
-                  </div>
-                </div>
-                <div className="about-how-item">
-                  <span className="about-dot" />
-                  <div>
-                    <strong>{t("about.privacy")}</strong>
-                    <p>{t("about.privacyDesc")}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <footer className="zone-footer" id="contact">
-        <div>
-          <Brand />
-          <p>{t("footer.tagline")}</p>
-        </div>
-        <div className="footer-links">
-          <div>
-            <h3>{t("footer.contactTitle")}</h3>
-            <a className="footer-email" href="mailto:contact@primaroas.com">
-              contact@primaroas.com
-            </a>
-            <span className="footer-detail">🇲🇳 +976 7250 3910</span>
-            <span className="footer-detail">🇺🇸 +1 571 671 5661</span>
-          </div>
-          <div>
-            <h3>{t("footer.projectsTitle")}</h3>
-            <a href="https://klinder.us/" target="_blank" rel="noreferrer">
-              Klinder
-            </a>
-          </div>
-          <div>
-            <h3>{t("footer.servicesTitle")}</h3>
-            <a href="/services/web-development">{t("footer.webDev")}</a>
-            <a href="/services/mobile-apps">{t("footer.mobileApps")}</a>
-            <a href="/services/ui-ux-design">{t("footer.uiux")}</a>
-            <a href="#ai-integration">{t("footer.aiIntegration")}</a>
-          </div>
-        </div>
-        <div className="footer-base">
-          <span>{t("footer.copyright")}</span>
-          <div className="footer-social">
-            <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://linkedin.com/company/primaroas" target="_blank" rel="noreferrer">LinkedIn</a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

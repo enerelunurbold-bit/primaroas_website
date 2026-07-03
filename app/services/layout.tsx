@@ -26,9 +26,9 @@ export default function ServicesLayout({
         <div className="dock-line" />
         <nav aria-label="Main navigation">
           <a href="/#services">{t("nav.services")}</a>
-          <a href="/#ai-integration">{t("nav.aiIntegration")}</a>
-          <a href="/#resources">{t("nav.freeResources")}</a>
-          <a href="/#about">{t("nav.about")}</a>
+          <a href="/ai-integration">{t("nav.aiIntegration")}</a>
+          <a href="/resources">{t("nav.freeResources")}</a>
+          <a href="/about">{t("nav.about")}</a>
         </nav>
         <a className="dock-cta" href="/#contact">
           {t("nav.contact")}

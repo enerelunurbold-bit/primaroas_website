@@ -2661,6 +2661,12 @@ a {
   background: #fff;
   text-align: left;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.pricing-card--light:hover {
+  transform: translateY(-6px);
+  border-color: var(--blue);
+  box-shadow: 0 16px 36px rgba(0, 103, 255, 0.18);
 }
 .pricing-card--light h3 {
   margin: 0;
@@ -2794,6 +2800,8 @@ a {
   max-width: 900px;
 }
 .service-section--white .service-features li {
+  display: flex;
+  align-items: center;
   position: relative;
   padding: 24px 24px 24px 56px;
   border: 1px solid var(--line);
@@ -2851,6 +2859,8 @@ a {
   max-width: 900px;
 }
 .service-section--dark .service-features li {
+  display: flex;
+  align-items: center;
   position: relative;
   padding: 24px 24px 24px 56px;
   border: 1px solid rgba(181, 217, 255, 0.15);
@@ -2922,11 +2932,20 @@ a {
   border-radius: 10px;
   background: #0a2a52;
   text-align: left;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.pricing-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--blue);
+  box-shadow: 0 16px 40px rgba(0, 103, 255, 0.25);
 }
 .pricing-card--highlight {
   border-color: var(--blue);
   background: linear-gradient(135deg, #0a3567, #0052cc);
   box-shadow: 0 12px 40px rgba(0, 103, 255, 0.25);
+}
+.pricing-card--highlight:hover {
+  box-shadow: 0 20px 48px rgba(0, 103, 255, 0.4);
 }
 .pricing-card h3 {
   margin: 0;
@@ -3330,10 +3349,19 @@ a {
   border-radius: 12px;
   background: #fff;
   text-align: left;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.seo-price-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--blue);
+  box-shadow: 0 16px 36px rgba(0, 103, 255, 0.18);
 }
 .seo-price-card--highlight {
   border-color: var(--blue);
   box-shadow: 0 8px 30px rgba(0, 103, 255, 0.12);
+}
+.seo-price-card--highlight:hover {
+  box-shadow: 0 20px 44px rgba(0, 103, 255, 0.28);
 }
 .seo-price-card h3 {
   margin: 0;
@@ -3482,7 +3510,7 @@ a {
 
 @media (max-width: 760px) {
   .service-hero {
-    min-height: auto;
+    min-height: 100svh;
     padding: 100px 24px 60px;
   }
   .service-hero-layout {
@@ -3511,7 +3539,14 @@ a {
   .timeline {
     grid-template-columns: 1fr 1fr;
   }
+  .timeline-step {
+    min-height: 120px;
+    justify-content: flex-start;
+  }
   .timeline::before {
+    display: none;
+  }
+  .timeline::after {
     display: none;
   }
   .timeline-zigzag {
