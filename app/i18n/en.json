@@ -52,10 +52,7 @@
     "label": "Our services",
     "title": "Comprehensive software solutions",
     "subtitle": "Tailored to your business needs — from web and mobile to AI integration and SEO.",
-    "featured": "FEATURED",
-    "ctaTitle": "Have something else in mind?",
-    "ctaText": "Tell us about your project and we'll bring it to life.",
-    "ctaLink": "Start a conversation →"
+    "featured": "FEATURED"
   },
   "solutions": {
     "ai": {

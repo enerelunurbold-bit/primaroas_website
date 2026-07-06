@@ -6,17 +6,6 @@ import HeroGlobe from "./hero-globe";
 import { useI18n } from "./i18n/context";
 import { Header, Footer } from "./site-chrome";
 
-const cardKeys = [
-  { key: "webDev", href: "/services/web-development" },
-  { key: "mobileDev", href: "/services/mobile-apps" },
-  { key: "uiux", href: "/services/ui-ux-design" },
-];
-
-const solutionKeys = [
-  { key: "ai", href: "/services/ai-integration" },
-  { key: "seo", href: "/services/seo-optimization" },
-];
-
 export default function Home() {
   const { t } = useI18n();
 
@@ -77,11 +66,6 @@ export default function Home() {
             <p>{t("solutions.seo.text")}</p>
             <span className="svc-learn">{t("solutions.seo.link")} →</span>
           </a>
-          <div className="svc-card svc-card--cta">
-            <h3>{t("services.ctaTitle")}</h3>
-            <p>{t("services.ctaText")}</p>
-            <a href="#contact" className="svc-cta-link">{t("services.ctaLink")}</a>
-          </div>
         </div>
       </section>
 

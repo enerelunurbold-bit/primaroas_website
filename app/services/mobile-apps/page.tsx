@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useI18n } from "../../i18n/context";
 import HeroCanvas from "../../hero-canvas";
 
@@ -34,16 +35,22 @@ export default function MobileApps() {
       <section className="service-section service-section--dark">
         <h2>{t("servicePages.pricing")}</h2>
         <div className="pricing-grid">
-          {pricing.map((p, i) => (
+          {pricing.map((p, i) => {
+            const plan = t(`servicePages.${tiers[i]}`);
+            const price = p.price === "custom" ? t("servicePages.custom") : p.price;
+            const quoteHref = `/quote?service=${encodeURIComponent(t("servicePages.mobileApps.label"))}&plan=${encodeURIComponent(plan)}&price=${encodeURIComponent(price)}`;
+
+            return (
             <div className={`pricing-card${i === 1 ? " pricing-card--highlight" : ""}`} key={i}>
-              <h3>{t(`servicePages.${tiers[i]}`)}</h3>
-              <span className="pricing-price">{p.price === "custom" ? t("servicePages.custom") : p.price}</span>
+              <h3>{plan}</h3>
+              <span className="pricing-price">{price}</span>
               <ul>
                 {p.features.map((f) => <li key={f}>{f}</li>)}
               </ul>
-              <a href="/#contact" className="pricing-cta">{t("servicePages.getStarted")}</a>
+              <Link href={quoteHref} className="pricing-cta">{t("servicePages.getStarted")}</Link>
             </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 

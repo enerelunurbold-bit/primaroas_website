@@ -1,15 +1,16 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import LanguageToggle from "./language-toggle";
 import { useI18n } from "./i18n/context";
 
 export function Brand() {
   return (
-    <a className="brand" href="/">
+    <Link className="brand" href="/">
       <span className="brand-mark">P</span>
       <span>primaroas</span>
-    </a>
+    </Link>
   );
 }
 
@@ -23,14 +24,13 @@ export function Header() {
         <Brand />
         <div className="dock-line dock-line--desktop" />
         <nav aria-label="Main navigation">
-          <a href="/#services">{t("nav.services")}</a>
-          <a href="/ai-integration">{t("nav.aiIntegration")}</a>
-          <a href="/resources">{t("nav.freeResources")}</a>
-          <a href="/about">{t("nav.about")}</a>
+          <Link href="/#services">{t("nav.services")}</Link>
+          <Link href="/resources">{t("nav.freeResources")}</Link>
+          <Link href="/about">{t("nav.about")}</Link>
         </nav>
-        <a className="dock-cta" href="/#contact">
+        <Link className="dock-cta" href="/#contact">
           {t("nav.contact")}
-        </a>
+        </Link>
         <LanguageToggle />
         <div className="dock-line dock-line--mobile" />
         <button
@@ -47,14 +47,13 @@ export function Header() {
       {menuOpen && (
         <div className="mobile-menu">
           <nav>
-            <a href="/#services" onClick={() => setMenuOpen(false)}>{t("nav.services")}</a>
-            <a href="/ai-integration" onClick={() => setMenuOpen(false)}>{t("nav.aiIntegration")}</a>
-            <a href="/resources" onClick={() => setMenuOpen(false)}>{t("nav.freeResources")}</a>
-            <a href="/about" onClick={() => setMenuOpen(false)}>{t("nav.about")}</a>
+            <Link href="/#services" onClick={() => setMenuOpen(false)}>{t("nav.services")}</Link>
+            <Link href="/resources" onClick={() => setMenuOpen(false)}>{t("nav.freeResources")}</Link>
+            <Link href="/about" onClick={() => setMenuOpen(false)}>{t("nav.about")}</Link>
           </nav>
-          <a className="mobile-menu-cta" href="/#contact" onClick={() => setMenuOpen(false)}>
+          <Link className="mobile-menu-cta" href="/#contact" onClick={() => setMenuOpen(false)}>
             {t("nav.contact")}
-          </a>
+          </Link>
         </div>
       )}
     </>
@@ -87,10 +86,10 @@ export function Footer() {
         </div>
         <div>
           <h3>{t("footer.servicesTitle")}</h3>
-          <a href="/services/web-development">{t("footer.webDev")}</a>
-          <a href="/services/mobile-apps">{t("footer.mobileApps")}</a>
-          <a href="/services/ui-ux-design">{t("footer.uiux")}</a>
-          <a href="/ai-integration">{t("footer.aiIntegration")}</a>
+          <Link href="/services/web-development">{t("footer.webDev")}</Link>
+          <Link href="/services/mobile-apps">{t("footer.mobileApps")}</Link>
+          <Link href="/services/ui-ux-design">{t("footer.uiux")}</Link>
+          <Link href="/services/ai-integration">{t("footer.aiIntegration")}</Link>
         </div>
       </div>
       <div className="footer-base">

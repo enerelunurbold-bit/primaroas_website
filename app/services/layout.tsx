@@ -1,14 +1,15 @@
 "use client";
 
+import Link from "next/link";
 import LanguageToggle from "../language-toggle";
 import { useI18n } from "../i18n/context";
 
 function Brand() {
   return (
-    <a className="brand" href="/">
+    <Link className="brand" href="/">
       <span className="brand-mark">P</span>
       <span>primaroas</span>
-    </a>
+    </Link>
   );
 }
 
@@ -25,14 +26,13 @@ export default function ServicesLayout({
         <Brand />
         <div className="dock-line" />
         <nav aria-label="Main navigation">
-          <a href="/#services">{t("nav.services")}</a>
-          <a href="/ai-integration">{t("nav.aiIntegration")}</a>
-          <a href="/resources">{t("nav.freeResources")}</a>
-          <a href="/about">{t("nav.about")}</a>
+          <Link href="/#services">{t("nav.services")}</Link>
+          <Link href="/resources">{t("nav.freeResources")}</Link>
+          <Link href="/about">{t("nav.about")}</Link>
         </nav>
-        <a className="dock-cta" href="/#contact">
+        <Link className="dock-cta" href="/#contact">
           {t("nav.contact")}
-        </a>
+        </Link>
         <LanguageToggle />
         <span className="menu-dots" aria-label="Menu">
           •••
@@ -61,9 +61,9 @@ export default function ServicesLayout({
           </div>
           <div>
             <h3>{t("footer.servicesTitle")}</h3>
-            <a href="/services/web-development">{t("footer.webDev")}</a>
-            <a href="/services/mobile-apps">{t("footer.mobileApps")}</a>
-            <a href="/services/ui-ux-design">{t("footer.uiux")}</a>
+            <Link href="/services/web-development">{t("footer.webDev")}</Link>
+            <Link href="/services/mobile-apps">{t("footer.mobileApps")}</Link>
+            <Link href="/services/ui-ux-design">{t("footer.uiux")}</Link>
           </div>
         </div>
         <div className="footer-base">

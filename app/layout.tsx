@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ChatAssistant from "./chat-assistant";
 import "./globals.css";
 import { I18nProvider } from "./i18n/context";
 
@@ -15,7 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-full flex flex-col">
-        <I18nProvider>{children}</I18nProvider>
+        <I18nProvider>
+          {children}
+          <ChatAssistant />
+        </I18nProvider>
       </body>
     </html>
   );

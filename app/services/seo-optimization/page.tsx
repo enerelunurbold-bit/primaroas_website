@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useI18n } from "../../i18n/context";
 import HeroCanvas from "../../hero-canvas";
 
@@ -78,7 +79,10 @@ export default function SEOOptimization() {
         <h2>{t("servicePages.seo.pricingTitle")}</h2>
         <p className="seo-pricing-sub">{t("servicePages.seo.pricingSubtitle")}</p>
         <div className="seo-pricing-grid">
-          {pricing.map((p, i) => (
+          {pricing.map((p, i) => {
+            const quoteHref = `/quote?service=${encodeURIComponent(t("servicePages.seo.label"))}&plan=${encodeURIComponent(p.tier)}&price=${encodeURIComponent(p.price)}`;
+
+            return (
             <div className={`seo-price-card${i === 1 ? " seo-price-card--highlight" : ""}`} key={p.tier}>
               <h3>{p.tier}</h3>
               <span className="seo-price">{p.price}</span>
@@ -87,9 +91,10 @@ export default function SEOOptimization() {
                   <li key={f}>{f}</li>
                 ))}
               </ul>
-              <a href="/#contact" className="seo-price-cta">{t("servicePages.getStarted")}</a>
+              <Link href={quoteHref} className="seo-price-cta">{t("servicePages.getStarted")}</Link>
             </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
